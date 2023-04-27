@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Tutorials</h1>
+        <p class="lead">Start Self-Learning Today: Be the best Developer in the company</p>
+    </div>
+</div>
+
+<div>
+    {{#if courses}}
+    <h1 class="text-center">Top Courses</h1>
+    <div class="container mt-3">
+        <div class="row d-flex justify-content-center">
+            {{#each courses}}
+            <div class="card-deck">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{imageUrl}}" alt="Card image cap" width="400">
+                    <div class="card-body">
+                        <h4 class="card-title">{{title}}</h4>
+                        <small class="float-right">Enrolled: {{enrolled}}</small>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+        {{else}}
+        <h4 class="text-center">No courses...</h4>
+        {{/if}}
+    </div>
+</div>
